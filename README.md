@@ -136,7 +136,7 @@ Step6: 将生成的 framework 导入到所需工程中
 1）直接将 IJKMediaFrameworkWithSSL.framework 拖入到工程中即可，注意记得勾选 Copy items if needed 和 对应的 target。
 
 2）然后添加相关依赖
-
+```
 libc++.tbd ( 编译器选 gcc 的请导入 libstdc++.tbd )
 libz.tbd
 libbz2.tbd
@@ -151,6 +151,7 @@ MobileCoreServices.framework
 OpenGLES.framework
 QuartzCore.framework
 VideoToolbox.framework
+```
 3）在相应文件中导入 #import <IJKMediaFrameworkWithSSL/IJKMediaPlayer.h>
 即可使用 IJKMediaPlayer 了
 
@@ -161,7 +162,7 @@ VideoToolbox.framework
  
  
  
- 
+ ```
 附件
 # 开启demuxer编译选项
 echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-demuxer=m4v"' >> ../config/module.sh
@@ -342,4 +343,4 @@ export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=ac3"
 export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=mpeg*"
 export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=cook"
 export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=h263"
- 
+```
